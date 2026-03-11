@@ -13,6 +13,7 @@
 
     /* Typography */
     --font-spartan: 'Cinzel', serif;
+    --font-orbitron: 'Orbitron', sans-serif;
     --font-cyber: 'Rajdhani', sans-serif;
 }
 
@@ -83,6 +84,7 @@ body {
 
 .logo-container {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 15px;
 }
@@ -94,7 +96,7 @@ body {
 }
 
 .header-logo-text {
-    font-family: var(--font-spartan);
+    font-family: var(--font-orbitron);
     font-size: 1.8rem;
     font-weight: 800;
     color: var(--clr-neon-blue);
@@ -106,10 +108,9 @@ body {
 }
 
 .footer-logo {
-    max-height: 50px;
+    height: 45px;
     width: auto;
     display: block;
-    margin-bottom: 0.5rem;
 }
 
 .neon-text {
@@ -695,7 +696,7 @@ body {
     align-items: center;
     font-size: 35px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
+    z-index: 9999;
     text-decoration: none;
     animation: pulse 2s infinite;
     transition: transform 0.3s ease;
