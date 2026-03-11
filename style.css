@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
 /* =========================================
    CSS VARIABLES & CORE SETUP
 ========================================= */
@@ -82,35 +84,26 @@ body {
     overflow: visible;
 }
 
-.logo-container {
+.brand-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
 }
 
-.header-logo {
+.brand-icon {
     height: 45px;
     width: auto;
     display: block;
 }
 
-.header-logo-text {
-    font-family: var(--font-orbitron);
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--clr-neon-blue);
+.brand-text {
+    font-family: 'Orbitron', sans-serif;
+    color: #00F0FF;
+    font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0 0 10px var(--clr-neon-blue-glow);
-    white-space: nowrap;
-    line-height: 1;
-}
-
-.footer-logo {
-    height: 45px;
-    width: auto;
-    display: block;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
 }
 
 .neon-text {
