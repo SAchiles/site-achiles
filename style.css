@@ -88,11 +88,12 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .brand-icon {
-    height: 45px;
+    height: 40px;
+    max-height: 40px;
     width: auto;
     display: block;
 }
@@ -100,10 +101,11 @@ body {
 .brand-text {
     font-family: 'Orbitron', sans-serif;
     color: #00F0FF;
-    font-size: 1.5rem;
+    font-weight: 700;
     text-transform: uppercase;
+    font-size: 1rem;
+    text-shadow: 0 0 8px #00F0FF;
     letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
 }
 
 .neon-text {
@@ -150,13 +152,13 @@ body {
 
 .logo-container {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .header-logo {
     height: 50px;
-    max-height: 50px;
     width: auto;
     display: block;
 }
@@ -165,7 +167,7 @@ body {
     font-family: 'Orbitron', sans-serif;
     color: #00F0FF;
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
     text-shadow: 0 0 8px #00F0FF;
     line-height: 1;
