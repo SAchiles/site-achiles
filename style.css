@@ -81,10 +81,28 @@ body {
     overflow: visible;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .header-logo {
     height: 45px;
     width: auto;
     display: block;
+}
+
+.header-logo-text {
+    font-family: var(--font-spartan);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--clr-neon-blue);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--clr-neon-blue-glow);
+    white-space: nowrap;
+    line-height: 1;
 }
 
 .footer-logo {

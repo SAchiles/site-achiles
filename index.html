@@ -20,9 +20,10 @@
 
     <!-- Header -->
     <header class="navbar">
-        <div class="logo-container">
-            <img src="achilestech_logo.png" alt="Achiles Tech Logo" class="header-logo" onerror="this.outerHTML='<h1 class=\\\'logo-text\\\'>ACHILES<span class=\\\'neon-text\\\'>TECH</span></h1><div class=\\\'logo-reflection\\\'></div>'">
-        </div>
+        <a href="#hero" class="logo-container" style="text-decoration: none;">
+            <img src="achilestech_logo.png" alt="Achiles Tech Logo" class="header-logo" onerror="this.src=\'\'; this.outerHTML='<h1 class=\\\'logo-text\\\'>ACHILES<span class=\\\'neon-text\\\'>TECH</span></h1><div class=\\\'logo-reflection\\\'></div>'">
+            <span class="header-logo-text">ACHILES TECH</span>
+        </a>
         <nav class="nav-links">
             <a href="#hero" class="nav-link">Início</a>
             <a href="#about" class="nav-link">Quem Somos</a>
@@ -127,8 +128,11 @@
     <footer id="contact" class="elegant-footer">
         <div class="footer-content">
             <div class="footer-brand">
-                <img src="achilestech_entrada.png" alt="Achiles Tech Logo" class="footer-logo" onerror="this.outerHTML='<h2 class=\\\'logo-text\\\'>ACHILES<span class=\\\'neon-text\\\'>TECH</span></h2>'">
-                <p class="footer-motto">Disciplina Clássica. Inovação Futurista.</p>
+                <div class="logo-container" style="justify-content: flex-start;">
+                    <img src="achilestech_logo.png" alt="Achiles Tech Logo" class="footer-logo">
+                    <span class="header-logo-text">ACHILES TECH</span>
+                </div>
+                <p class="footer-motto">Ecossistemas tecnológicos invencíveis.</p>
             </div>
             <div class="footer-contact">
                 <h3>Forje sua aliança conosco</h3>
