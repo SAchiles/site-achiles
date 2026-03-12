@@ -1,16 +1,51 @@
 // script.js
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Preloader Logic
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                preloader.style.visibility = 'hidden';
+            }, 800);
+        });
+        
+        // Fallback
+        setTimeout(() => {
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+        }, 2000);
+    }
+
     // Navbar scroll effect
-    const navbar = document.querySelector('.navbar');
+    const navbarContainer = document.querySelector('.navbar-container');
+    const navbarLinks = document.querySelector('.navbar-links');
+    let lastScrollY = window.scrollY;
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(2, 6, 23, 0.95)';
-            navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.5)';
+            if (navbarLinks) {
+                navbarLinks.style.background = 'rgba(2, 6, 23, 0.95)';
+                navbarLinks.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.5)';
+            }
         } else {
-            navbar.style.background = 'rgba(2, 6, 23, 0.8)';
-            navbar.style.boxShadow = 'none';
+            if (navbarLinks) {
+                navbarLinks.style.background = 'rgba(2, 6, 23, 0.8)';
+                navbarLinks.style.boxShadow = 'none';
+            }
+        }
+
+        // Hide/Show navbar on scroll
+        if (navbarContainer) {
+            if (window.scrollY > lastScrollY && window.scrollY > 200) {
+                // Scrolling down
+                navbarContainer.classList.add('navbar-hidden');
+            } else {
+                // Scrolling up
+                navbarContainer.classList.remove('navbar-hidden');
+            }
+            lastScrollY = window.scrollY;
         }
     });
 
@@ -99,5 +134,46 @@ document.addEventListener('DOMContentLoaded', () => {
                 icon.classList.add('fa-bars');
             });
         });
+    }
+
+    // Authority CountUp Animation
+    const observerCountUpOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+    };
+
+    const countUpObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const targetEl = entry.target;
+                const valueEl = targetEl.querySelector('.count-value');
+                if (valueEl) {
+                    const target = parseInt(targetEl.getAttribute('data-target'));
+                    startCountUp(valueEl, target, 2000);
+                }
+                observer.unobserve(targetEl); // Count only once
+            }
+        });
+    }, observerCountUpOptions);
+
+    document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+        countUpObserver.observe(el);
+    });
+
+    function startCountUp(element, target, duration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const easeProgress = progress * (2 - progress); // easeOutQuad
+            element.innerText = Math.floor(easeProgress * target);
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            } else {
+                element.innerText = target;
+            }
+        };
+        window.requestAnimationFrame(step);
     }
 });
