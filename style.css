@@ -143,11 +143,11 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0 5%;
-    background: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.7)), url('achilestech_topo.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    backdrop-filter: blur(10px);
+    background: transparent !important;
+    background-image: url('achilestech_topo.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
     border-bottom: 1px solid rgba(0, 240, 255, 0.2);
     z-index: 1000;
     transition: all 0.3s ease;
