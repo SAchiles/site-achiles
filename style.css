@@ -134,23 +134,34 @@ body {
 /* =========================================
    NAVIGATION
 ========================================= */
-.navbar {
+.navbar-container {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 100px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-banner {
+    width: 100%;
+    height: 150px;
+    background-color: #020617;
+    background-image: url('achilestech_topo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar-links {
+    width: 100%;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 5%;
-    background: transparent !important;
-    background-image: url('achilestech_topo.png') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
+    background-color: rgba(2, 6, 23, 0.95);
     border-bottom: 1px solid rgba(0, 240, 255, 0.2);
-    z-index: 1000;
-    transition: all 0.3s ease;
 }
 
 .logo-container {
@@ -245,7 +256,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
-    padding-top: 120px;
+    padding-top: 250px;
     background: radial-gradient(circle at 70% 50%, rgba(11, 19, 43, 0.8) 0%, var(--clr-dark-blue) 70%);
 }
 
