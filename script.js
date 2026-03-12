@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 preloader.style.opacity = '0';
                 preloader.style.visibility = 'hidden';
-            }, 800);
+            }, 300);
         });
         
-        // Fallback
+        // Fallback timing for safety
         setTimeout(() => {
             preloader.style.opacity = '0';
             preloader.style.visibility = 'hidden';
-        }, 2000);
+        }, 1200);
     }
 
     // Navbar scroll effect
@@ -83,17 +83,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     // Add animation classes to elements
-    const animateElements = document.querySelectorAll('.solution-card, .about-description, .stat-box');
+    const animateElements = document.querySelectorAll('.solution-card, .about-description, .stat-box, .bento-item, .guarantee-card, .section-title');
     
     // Quick CSS injection for these animations
     const style = document.createElement('style');
     style.innerHTML = `
-        .solution-card, .about-description, .stat-box {
+        .solution-card, .about-description, .stat-box, .bento-item, .guarantee-card, .section-title {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
-        .solution-card.visible, .about-description.visible, .stat-box.visible {
+        .solution-card.visible, .about-description.visible, .stat-box.visible, .bento-item.visible, .guarantee-card.visible, .section-title.visible {
             opacity: 1;
             transform: translateY(0);
         }
@@ -102,8 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animateElements.forEach((el, index) => {
         // Add slight delay based on index for staggered effect
-        if(el.classList.contains('solution-card') || el.classList.contains('stat-box')) {
-            el.style.transitionDelay = `${index * 0.15}s`;
+        if(el.classList.contains('solution-card') || el.classList.contains('stat-box') || el.classList.contains('bento-item') || el.classList.contains('guarantee-card')) {
+            el.style.transitionDelay = `${(index % 4) * 0.15}s`;
         }
         observer.observe(el);
     });
@@ -176,4 +176,20 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         window.requestAnimationFrame(step);
     }
+
+    // Magnetic Buttons
+    const magneticButtons = document.querySelectorAll('.btn-magnetic');
+    magneticButtons.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const position = btn.getBoundingClientRect();
+            const x = e.pageX - position.left - position.width / 2;
+            const y = e.pageY - position.top - position.height / 2;
+            
+            btn.style.transform = `translate(${x * 0.3}px, ${y * 0.5}px)`;
+        });
+
+        btn.addEventListener('mouseout', (e) => {
+            btn.style.transform = 'translate(0px, 0px)';
+        });
+    });
 });
