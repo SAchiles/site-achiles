@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DetailPro | Gestão de Elite para Estéticas Automotivas</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-detailpro {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 250px 5% 5rem;
+            background: radial-gradient(circle at center, rgba(0, 240, 255, 0.15) 0%, var(--clr-dark-blue) 70%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-detailpro .hero-image-container {
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+        .hero-detailpro .hero-image {
+            max-width: 500px;
+            filter: drop-shadow(0 0 25px rgba(0, 240, 255, 0.3));
+            animation: float 4s ease-in-out infinite;
+        }
+        @media (max-width: 600px) {
+            .hero-detailpro .hero-image {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Immersive Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <img src="achilestech_logo.webp" alt="Loading" class="preloader-logo">
+            <div class="preloader-text">INICIANDO SISTEMAS</div>
+        </div>
+    </div>
+
+    <!-- Neural Grid Background -->
+    <div class="cyber-grid"></div>
+
+    <!-- Header -->
+    <header class="navbar-container">
+        <a href="index.html" class="navbar-banner" style="display: block;"></a>
+        <div class="navbar-links">
+            <nav class="nav-links">
+                <a href="index.html#hero" class="nav-link">Início</a>
+                <a href="index.html#about" class="nav-link">Quem Somos</a>
+                <a href="index.html#solutions" class="nav-link">Soluções</a>
+                <a href="https://wa.me/5519982686160?text=Olá!%20Gostaria%20de%20um%20orçamento%20da%20Achiles%20Tech." target="_blank" class="nav-link btn-glow btn-magnetic">Contato</a>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- DetailPro Hero Section -->
+    <section id="hero" class="hero-detailpro">
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="hero-image-container">
+            <img src="logo_detailpro_branco.webp" alt="DetailPro Logo" class="hero-image">
+        </div>
+        <div class="hero-content" style="max-width: 900px;">
+            <h2 class="spartan-title">Gestão de Elite para <span class="neon-text">Estéticas Automotivas</span></h2>
+            <p class="hero-subtitle" style="color: var(--clr-marble);">Abandone o papel. Automatize a sua agenda, controle o seu estoque e deixe a Inteligência Artificial multiplicar os seus clientes.</p>
+            <div class="hero-buttons" style="justify-content: center; flex-wrap: wrap; gap: 1.5rem;">
+                <a href="https://wa.me/5519982686160?text=Olá!%20Quero%20testar%20o%20DetailPro%20gratuitamente%20por%2014%20dias." target="_blank" class="btn btn-primary btn-magnetic" style="box-shadow: 0 0 25px var(--clr-neon-blue-glow);">TESTAR 14 DIAS GRÁTIS</a>
+                <a href="#funcionalidades" class="btn btn-secondary btn-magnetic">Ver Funcionalidades</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funcionalidades (O Arsenal) -->
+    <section id="funcionalidades" style="padding: 8rem 5%; background: var(--clr-dark-blue);">
+        <h2 class="section-title text-center">O <span class="neon-text">Arsenal</span></h2>
+        
+        <div class="bento-grid" style="max-width: 1100px; margin: 4rem auto 0;">
+            
+            <!-- Card 1 -->
+            <div class="bento-item bento-half">
+                <i class="fas fa-calendar-check bento-icon"></i>
+                <h3 class="card-title" style="margin-bottom: 0.5rem;">Agenda Pública <span class="neon-highlight">(Link na Bio)</span></h3>
+                <p class="card-text">O seu cliente agenda sozinho 24/7 direto pelo link no seu Instagram. Confirmação automática via WhatsApp.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bento-item bento-half">
+                <i class="fas fa-file-invoice-dollar bento-icon"></i>
+                <h3 class="card-title" style="margin-bottom: 0.5rem;">Ordem de Serviço Inteligente</h3>
+                <p class="card-text">Envie PDFs profissionais, orçamentos e avisos de veículo pronto direto no WhatsApp do cliente com 1 clique.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bento-item bento-half">
+                <i class="fas fa-brain bento-icon"></i>
+                <h3 class="card-title" style="margin-bottom: 0.5rem;">Inteligência Artificial Integrada</h3>
+                <p class="card-text">Um oráculo digital que analisa o seu negócio e sugere ações exatas para reativar clientes antigos e aumentar o lucro.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bento-item bento-half">
+                <i class="fas fa-boxes bento-icon"></i>
+                <h3 class="card-title" style="margin-bottom: 0.5rem;">Controle Físico e Financeiro</h3>
+                <p class="card-text">Baixa automática de estoque (ceras, químicos) a cada OS concluída e relatórios financeiros em tempo real.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Offer & Onboarding Section -->
+    <section class="authority-section" style="padding: 8rem 5%;">
+        <div class="glass-stats-container" style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2rem;">
+            <h2 class="section-title" style="margin-bottom: 0;">A Garantia de <span class="neon-text">Sucesso</span></h2>
+            
+            <div class="stat-number" style="font-size: 2.2rem; white-space: normal; color: var(--clr-marble);">Apenas <span class="neon-highlight">R$ 59,90/mês</span> ou R$ 49,90 no plano anual.</div>
+            
+            <p class="about-text" style="color: var(--clr-marble-dim); font-size: 1.25rem; max-width: 700px; margin-bottom: 1rem;">
+                Sem fidelidade. E o melhor: <span class="neon-strong">Configuração Gratuita</span>. A nossa equipa de engenharia insere os seus serviços, clientes e estoque para você começar a faturar no primeiro minuto.
+            </p>
+            
+            <a href="https://wa.me/5519982686160?text=Olá!%20Quero%20revolucionar%20minha%20estética%20com%20o%20DetailPro!" target="_blank" class="btn btn-primary btn-magnetic btn-cta-large" style="width: 100%;">QUERO REVOLUCIONAR A MINHA ESTÉTICA</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="elegant-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#hero" style="text-decoration: none;">
+                    <div class="brand-container">
+                        <img src="achilestech_logo.webp" alt="Achiles Tech Logo" class="brand-icon" loading="lazy">
+                        <span class="brand-text">ACHILES TECH</span>
+                    </div>
+                </a>
+                <p class="footer-motto">Ecossistemas tecnológicos invencíveis.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Forje sua aliança conosco</h3>
+                <p><i class="fas fa-envelope"></i> achilestech@gmail.com</p>
+                <p><i class="fab fa-whatsapp"></i> (19) 9 8268-6160</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://wa.me/5519982686160?text=Olá!%20Gostaria%20de%20um%20orçamento%20da%20Achiles%20Tech." target="_blank" class="social-icon" style="width: 60px; height: 60px; font-size: 2rem;"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Achiles Tech. Todos os direitos reservados. Erguido com tecnologia de ponta.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5519982686160?text=Olá!%20Vi%20o%20site%20da%20Achiles%20Tech%20e%20gostaria%20de%20fazer%20uma%20cotação." target="_blank" class="floating-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
