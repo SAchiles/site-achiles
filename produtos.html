@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS | Nossos Produtos - Achiles Tech</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .product-card {
+            width: 100%; display: flex; flex-direction: row; gap: 2rem; align-items: center; text-align: left; padding: 3rem;
+            position: relative; overflow: hidden;
+        }
+        @media (max-width: 768px) {
+            .product-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Immersive Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <img src="achilestech_logo.webp" alt="Loading" class="preloader-logo">
+            <div class="preloader-text">INICIANDO SISTEMAS</div>
+        </div>
+    </div>
+
+    <!-- Neural Grid Background -->
+    <div class="cyber-grid"></div>
+
+    <!-- Header -->
+    <header class="navbar-container">
+        <a href="index.html" class="navbar-banner" style="display: block;"></a>
+        <div class="navbar-links">
+            <nav class="nav-links">
+                <a href="index.html#hero" class="nav-link">Início</a>
+                <a href="index.html#about" class="nav-link">Quem Somos</a>
+                <a href="index.html#solutions" class="nav-link">Soluções</a>
+                <a href="produtos.html" class="nav-link">Produtos</a>
+                <a href="https://wa.me/5519982686160?text=Olá!%20Gostaria%20de%20um%20orçamento%20da%20Achiles%20Tech." target="_blank" class="nav-link btn-glow btn-magnetic">Contato</a>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header Section de Produtos -->
+    <section style="padding: 220px 5% 5rem; text-align: center; position: relative;">
+        <h1 class="spartan-title" style="font-size: 3.5rem; margin-bottom: 1rem;">NOSSOS <span class="neon-text">PRODUTOS (SaaS)</span></h1>
+        <p class="hero-subtitle" style="max-width: 800px; margin: 0 auto; color: var(--clr-marble-dim);">Ecossistemas proprietários desenvolvidos com a engenharia Achiles Tech.</p>
+    </section>
+
+    <!-- Vitrine de Produtos -->
+    <section style="padding: 0 5% 8rem;">
+        <div style="display: flex; flex-direction: column; gap: 4rem; max-width: 1000px; margin: 0 auto;">
+            
+            <!-- Produto 1: DetailPro -->
+            <div class="solution-card marble-card product-card">
+                <div class="card-glow"></div>
+                <div style="flex: 1;">
+                    <img src="logo_detailpro_branco.webp" alt="DetailPro Logo" style="max-width: 250px; margin-bottom: 1.5rem; filter: drop-shadow(0 0 15px rgba(0,240,255,0.4));">
+                    <h3 class="card-title">DetailPro - Gestão Automotiva</h3>
+                    <p class="card-text" style="font-size: 1.1rem; line-height: 1.8;">O SaaS definitivo para Estéticas Automotivas e Lava-Rápidos. Agendamento público, ordens de serviço automatizadas, gestão de estoque e IA integrada.</p>
+                    <a href="detailpro.html" class="btn btn-primary btn-magnetic" style="display: inline-block; margin-top: 1rem;">Conhecer DetailPro</a>
+                </div>
+            </div>
+
+            <!-- Produto 2: MedFlow -->
+            <div class="solution-card marble-card product-card">
+                <div class="card-glow" style="background: var(--clr-marble); opacity: 0.1;"></div>
+                <div style="position: absolute; top: 1.5rem; right: 1.5rem; background: rgba(0,0,0,0.5); border: 1px solid var(--clr-marble-dim); padding: 0.5rem 1rem; border-radius: 4px; color: var(--clr-marble-dim); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; z-index: 5;">Lançamento em Breve</div>
+                <div style="flex: 1;">
+                    <!-- Placeholder icon for MedFlow -->
+                    <i class="fas fa-heartbeat neon-icon" style="font-size: 4rem; margin-bottom: 1.5rem; display: block; color: var(--clr-marble); text-shadow: 0 0 10px rgba(255,255,255,0.3);"></i>
+                    <h3 class="card-title">MedFlow - Automação em Saúde</h3>
+                    <p class="card-text" style="font-size: 1.1rem; line-height: 1.8;">Ecossistema completo de automação e gestão inteligente de fluxo para clínicas médicas e consultórios de alto padrão.</p>
+                    <a href="https://wa.me/5519982686160?text=Olá!%20Gostaria%20de%20entrar%20na%20lista%20de%20espera%20do%20MedFlow." target="_blank" class="btn btn-secondary btn-magnetic" style="display: inline-block; margin-top: 1rem;">Lista de Espera</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="elegant-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#hero" style="text-decoration: none;">
+                    <div class="brand-container">
+                        <img src="achilestech_logo.webp" alt="Achiles Tech Logo" class="brand-icon" loading="lazy">
+                        <span class="brand-text">ACHILES TECH</span>
+                    </div>
+                </a>
+                <p class="footer-motto">Ecossistemas tecnológicos invencíveis.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Forje sua aliança conosco</h3>
+                <p><i class="fas fa-envelope"></i> achilestech@gmail.com</p>
+                <p><i class="fab fa-whatsapp"></i> (19) 9 8268-6160</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://wa.me/5519982686160?text=Olá!%20Gostaria%20de%20um%20orçamento%20da%20Achiles%20Tech." target="_blank" class="social-icon" style="width: 60px; height: 60px; font-size: 2rem;"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Achiles Tech. Todos os direitos reservados. Erguido com tecnologia de ponta.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5519982686160?text=Olá!%20Vi%20o%20site%20da%20Achiles%20Tech%20e%20gostaria%20de%20fazer%20uma%20cotação." target="_blank" class="floating-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
